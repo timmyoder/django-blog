@@ -3,8 +3,6 @@ python:
   - "3.6"
 install:
   - pip install -r requirements.txt
-  - cd mysite/
   - python manage.py migrate
 script:
-  - cd mysite/
   - python manage.py test
