@@ -31,6 +31,7 @@ class PostDetailView(DetailView):
     queryset = Post.objects.exclude(published_date__exact=None)
     template_name = "blogging/detail.html"
 
+
 class UserViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
@@ -40,6 +41,7 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
+
 class PostViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows posts to be viewed or edited.
@@ -48,6 +50,7 @@ class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all().order_by("-created_date")
     serializer_class = PostSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
 
 class CategoryViewSet(viewsets.ModelViewSet):
     """

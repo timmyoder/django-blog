@@ -20,9 +20,9 @@ from django.contrib.auth.views import LoginView, LogoutView
 from blogging.views import UserViewSet, CategoryViewSet, PostViewSet
 
 router = routers.DefaultRouter()
-router.register(r'users', UserViewSet)
-router.register(r'posts', PostViewSet)
-router.register(r'categories', CategoryViewSet)
+router.register(r"users", UserViewSet)
+router.register(r"posts", PostViewSet)
+router.register(r"categories", CategoryViewSet)
 
 urlpatterns = [
     path("", include("blogging.urls")),
