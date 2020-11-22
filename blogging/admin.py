@@ -7,11 +7,11 @@ class CategroyInline(admin.TabularInline):
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    exclude = ('posts',)
+    exclude = ("posts",)
 
 
 class PostAdmin(admin.ModelAdmin):
-    fields = ('title', 'text', 'author', 'published_date')
+    fields = ("title", "text", "author", "published_date")
     inlines = [
         CategroyInline,
     ]
