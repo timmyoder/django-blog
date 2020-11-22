@@ -54,6 +54,6 @@ class CategoryViewSet(viewsets.ModelViewSet):
     API endpoint that allows categories to be viewed or edited.
     """
 
-    queryset = Category.objects.all().order_by("-name")
+    queryset = Category.objects.all().order_by("name")
     serializer_class = CategorySerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
