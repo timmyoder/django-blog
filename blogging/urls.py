@@ -6,7 +6,7 @@ from blogging.views import (
     UserViewSet,
     CategoryViewSet,
     PostViewSet,
-    add_model
+    add_model,
 )
 
 router = routers.DefaultRouter()
