@@ -1,2 +1,2 @@
 Django==2.2.5
-black
+black==19.10b0
