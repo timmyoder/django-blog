@@ -40,8 +40,8 @@ def add_model(request):
             model_instance = form.save(commit=False)
             model_instance.published_date = timezone.now()
             model_instance.save()
-            return redirect('/')
+            return redirect("/")
 
     else:
         form = MyPostForm()
-        return render(request, "blogging/add.html", {'form': form})
+        return render(request, "blogging/add.html", {"form": form})
